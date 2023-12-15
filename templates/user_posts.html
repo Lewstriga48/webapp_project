@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ user.username }}'s Posts</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="/static/styles.css"> 
+
+
+</head>
+<body>
+    <h1>{{ user.username }}'s Posts</h1>
+    <ul>
+    {% for post in posts %}
+        <li><strong>{{ post.title }}</strong>: {{ post.content }}</li>
+    {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Back to Users</a>
+</body>
+</html>
