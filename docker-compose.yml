@@ -10,7 +10,7 @@ services:
       - .:/app
     depends_on:
       - db
-    entrypoint: ["/app/entrypoint.sh"]
+    entrypoint: ["./entrypoint.sh"]
 
   db:
     image: mysql:5.7
