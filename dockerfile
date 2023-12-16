@@ -13,5 +13,5 @@ RUN apt-get update && apt-get install -y netcat-openbsd
 
 COPY . .
 
-CMD ["./entrypoint.sh"]
+CMD ["/app/entrypoint.sh"]
 
