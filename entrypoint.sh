@@ -7,6 +7,9 @@ while ! nc -z db 3306; do
 done
 
 echo "MySQL started"
+if [ ! -d "/app/migrations" ]; then
+  flask db init
+fi
 
 flask db upgrade
 python app.py
